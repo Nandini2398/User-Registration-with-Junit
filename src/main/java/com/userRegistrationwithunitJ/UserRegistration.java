@@ -13,7 +13,9 @@ public class UserRegistration {
 	private static final String LAST_NAME_REGEX = "^[A-Z][a-z]{2,}$";
 	private static final String EMAIL_REGEX = "^[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_+-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
 	private static final String PHONE_NUMBER_REGEX = "^[0-9]{2}[0-9]{10}";
-	static boolean isFirstNameValid,isLastNameValid,isMailValid,isNumberValid;
+	private static final String PASSWORD_REGEX = "^[0-9 a-z A-Z @#$%^&-+=]{8,}$";
+
+	static boolean isFirstNameValid,isLastNameValid,isMailValid,isNumberValid,isPasswordValid;
 	
 	public boolean validateFirstName(String firstName) {
 		isFirstNameValid= Pattern.matches(FIRST_NAME_REGEX,firstName);
@@ -25,22 +27,29 @@ public class UserRegistration {
 	public boolean validateLastName(String lastName) {
 		isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
 		if(!isLastNameValid) {
-			System.out.println("Last Name is invalid.Please enter proper last name");
+			System.out.println("Last Name is invalid...Please enter proper last name");
 		}
 		return Pattern.matches(LAST_NAME_REGEX, lastName);
 	}
 	public boolean validateEmail(String mail) {
 		isMailValid= Pattern.matches(EMAIL_REGEX, mail);
 		if(!isMailValid) {
-			System.out.println("E-mail is invalid.Please enter e-mail");
+			System.out.println("E-mail is invalid...Please enter e-mail");
 		}
 		return Pattern.matches(EMAIL_REGEX, mail);
 	}
 	public boolean validatePhoneNumber(String phoneNumber) {
 		isNumberValid= Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
 		if(!isNumberValid) {
-			System.out.println("Phone Number is invalid.Please enter proper phone-number");
+			System.out.println("Phone Number is invalid...Please enter proper phone-number");
 		}
 		return Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
+	}
+	public boolean validatePassword(String password) {
+		isPasswordValid= Pattern.matches(PASSWORD_REGEX, password);
+		if(!isPasswordValid) {
+			System.out.println("Password is invalid...Please enter proper password");
+		}
+		return Pattern.matches(PASSWORD_REGEX, password);
 	}
 }
