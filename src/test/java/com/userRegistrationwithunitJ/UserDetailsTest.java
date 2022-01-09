@@ -8,47 +8,47 @@ public class UserDetailsTest {
 
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
-		boolean isValid = register.validateFirstName("Ravi");
+		boolean isValid = register.validateFirstName("Nandu");
 		Assert.assertTrue(isValid);
 	}
 	@Test
 	public void givenFirstName_WhenNotProper_ShouldReturnFalse() {
-		boolean isValid = register.validateFirstName("ravi");
+		boolean isValid = register.validateFirstName("nandu");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenFirstName_WhenShort_ShouldReturnFalse() {
-		boolean isValid = register.validateFirstName("ra");
+		boolean isValid = register.validateFirstName("na");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
-		boolean isValid = register.validateLastName("Kumar");
+		boolean isValid = register.validateLastName("Raj");
 		Assert.assertTrue(isValid);
 	}
 	@Test
 	public void givenLastName_WhenNotProper_ShouldReturnFalse() {
-		boolean isValid = register.validateLastName("kumar");
+		boolean isValid = register.validateLastName("raj");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenLastName_WhenShort_ShouldReturnFalse() {
-		boolean isValid = register.validateLastName("ku");
+		boolean isValid = register.validateLastName("ra");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenEmail_WhenProper_ShouldReturnTrue() {
-		boolean isValid = register.validateEmail("abc@gmail.com");
+		boolean isValid = register.validateEmail("nan@gmail.com");
 		Assert.assertTrue(isValid);
 	}
 	@Test
 	public void givenEmail_WhenNotProper_ShouldReturnFalse() {
-		boolean isValid = register.validateEmail(".abc@gmail.com");
+		boolean isValid = register.validateEmail(".nan@cgmail.com");
 		Assert.assertFalse(isValid);
 	}
 	@Test
 	public void givenPhoneNumber_WhenProper_ShouldReturnTrue() {
-		boolean isValid = register.validateEmail("917620690906");
+		boolean isValid = register.validateEmail("91785468506");
 		Assert.assertTrue(isValid);
 	}
 	@Test
@@ -68,7 +68,7 @@ public class UserDetailsTest {
 	}
 	@Test
 	public void givenPassword_WhenNotProper_ShouldReturnFalse() {
-		boolean isValid = register.validateEmail("b3@fr");
+		boolean isValid = register.validateEmail("b3@fr7skd");
 		Assert.assertFalse(isValid);
 	}
 }
