@@ -9,4 +9,4 @@ public class EmailException extends Exception {
 		super(message);
 		this.type = type;
 	}
-} 
+}

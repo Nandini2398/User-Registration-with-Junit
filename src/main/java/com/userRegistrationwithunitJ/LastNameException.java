@@ -9,4 +9,6 @@ public class LastNameException extends Exception {
 			super(message);
 			this.type = type;
 		}
+		
+		
 	}
