@@ -14,8 +14,7 @@ public class UserRegistration {
 	private static final String EMAIL_REGEX = "^[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_+-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
 	private static final String PHONE_NUMBER_REGEX = "^[0-9]{2}[0-9]{10}";
 	private static final String PASSWORD_REGEX = "(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_-])[a-zA-Z0-9].{8,}$";
-
-	static boolean isFirstNameValid,isLastNameValid,isMailValid,isNumberValid,isPasswordValid;
+	static boolean isFirstNameValid,isLastNameValid,isMailValid,isNumberValid,isPasswordValid,isMoodValid;
 	
 	public boolean validateFirstName(String firstName) {
 		isFirstNameValid= Pattern.matches(FIRST_NAME_REGEX,firstName);
@@ -52,3 +51,4 @@ public class UserRegistration {
 		}
 		return isPasswordValid;
 	}
+}
