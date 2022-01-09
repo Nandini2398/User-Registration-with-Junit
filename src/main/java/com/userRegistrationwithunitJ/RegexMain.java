@@ -9,7 +9,7 @@ public class RegexMain {
 		System.out.println("Enter First-Name: ");
 		String firstName = sc.next();
 		registration.validateFirstName(firstName);
-		System.out.println("Enter First-Name: ");
+		System.out.println("Enter Last-Name: ");
 		String lastName = sc.next();
 		registration.validateLastName(lastName);
 		System.out.println("Enter Email: ");
@@ -21,5 +21,6 @@ public class RegexMain {
 		System.out.println("Enter Password: ");
 		String password = sc.next();
 		registration.validatePhoneNumber(password);
+		
 	}
 }
